@@ -1,4 +1,4 @@
-const userChoice = document.querySelector("#user-input")
+const userInput = document.querySelector("#user-input")
 const playButton = document.querySelector("#play-button")
 const gameStatus = document.querySelector("#game-status")
 
