@@ -59,6 +59,11 @@ main {
 
 .button {
     padding: 3em;
+    user-select: none;
+}
+
+.button:hover {
+    background-color: gray;
 }
 
 /* FOOTER */

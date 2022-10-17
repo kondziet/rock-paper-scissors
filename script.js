@@ -1,8 +1,6 @@
-const userInput = document.querySelector("#user-input")
-const userScoreDisplay = document.querySelector("#user-score")
+const userScoreDisplay = document.querySelector("#player-score")
 const computerScoreDisplay = document.querySelector("#computer-score")
-const playButton = document.querySelector("#play-button")
-const gameStatus = document.querySelector("#game-status")
+const buttons = document.querySelectorAll(".button")
 
 let userScore = 0
 let computerScore = 0
@@ -18,27 +16,21 @@ whatBeatsWhat.set("rock", "scissors")
 whatBeatsWhat.set("paper", "rock")
 whatBeatsWhat.set("scissors", "paper")
 
-function playGame() {
+function playRound(e) {
     
-    let userChoice = userInput.value.toLowerCase()
-    let score = playRound(userChoice, getComputerChoice())
+    let playerChoice = e.target.getAttribute("data-key")
+    let score = getScore(playerChoice, getComputerChoice())
 
     if (score == "user") {
-        userScoreDisplay.textContent = `User score: ${++userScore}`
-        gameStatus.textContent = "User wins!"
+        userScoreDisplay.textContent = `${++userScore}`
     } else if (score == "computer") {
-        computerScoreDisplay.textContent = `Computer score: ${++computerScore}`
-        gameStatus.textContent = "Computer wins!"
-    } else {
-        gameStatus.textContent = "Draw!"
+        computerScoreDisplay.textContent = `${++computerScore}`
     }
 
     if (userScore == 3) {
-        gameStatus.textContent = "User won!"
-        playButton.disabled = true
+        buttons.disabled = true
     }else if (computerScore == 3) {
-        gameStatus.textContent = "Computer won!"
-        playButton.disabled = true
+        buttons.disabled = true
     }
 
 }
@@ -47,7 +39,7 @@ function getComputerChoice() {
     return weapons[Math.floor(Math.random() * weapons.length)]
 }
 
-function playRound(userChoice, computerChoice) {
+function getScore(userChoice, computerChoice) {
     
     if (userChoice == computerChoice) {
         return "draw"
@@ -60,4 +52,4 @@ function playRound(userChoice, computerChoice) {
     }
 }
 
-playButton.addEventListener("click", playGame)
+buttons.forEach(button => button.addEventListener('click', playRound))
