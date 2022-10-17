@@ -11,10 +11,12 @@
 <body>
 
     <header>
-        <div class="header-logo">Rock Paper Scissors</div>
-    </header>
+        <div class="header-logo">
+            <span>Rock</span>
+            <span>Paper</span>
+            <span>Scissors</span>
+        </div>
 
-    <main>
         <div class="scores-container">
             <div class="score-box">
                 <p id="player-score">0</p>
@@ -25,11 +27,13 @@
                 <p>Computer</p>
             </div>
         </div>
+    </header>
 
+    <main>
         <div class="buttons-container">
-            <div class="button" data-key="rock">Rock</div>
-            <div class="button" data-key="paper">Paper</div>
-            <div class="button" data-key="scissors">Scissors</div>
+            <div class="button" class="button-rock" data-key="rock">Rock</div>
+            <div class="button" class="button-paper" data-key="paper">Paper</div>
+            <div class="button" class="button-scissors" data-key="scissors">Scissors</div>
         </div>
     </main>
 

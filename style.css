@@ -13,16 +13,57 @@ body {
     display: flex;
     flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #edf6fc;
+    background-color: #408bb6;
+    background-image: linear-gradient(180deg, #408bb6 0%, #3c42a6 100%);
 }
 
 /* HEADER */
 
 header {
-    padding: 2em 0;
+    padding: 2em;
+    margin: 3em;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: #7fb944;
+    border: 2px solid #edf6fc;
+    border-radius: 15px;
+    box-shadow: 5px 5px #edf6fc2a;
+    width: 80%;
+    max-width: 900px;
+    max-height: 250px;
+    flex: 1;
+    align-self: center;
+}
+
+.header-logo span {
+    font-size: 42px;
+    font-weight: 500;
+    display: block;
+}
+
+.scores-container {
+    border: 2px solid #edf6fc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    min-width: 350px;
+    max-width: 500px;
+    gap: 2em;
+}
+
+.score-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    width: 50%;
+}
+
+.score-box p{
+    font-size: 18px;
+    font-weight: 600;
 }
 
 /* MAIN */
@@ -33,27 +74,10 @@ main {
     flex: 1;
 }
 
-.scores-container {
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-}
-
-.score-box {
-    background-color: bisque;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em;
-    width: 30%;
-}
-
 .buttons-container {
-    display: flex;
-    justify-content: center;
     border: 1px solid black;
-    max-width: 500px;
+    width: 50%;
+    aspect-ratio: 1/1;
     margin: 20px auto;
 }
 
@@ -73,5 +97,4 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #7fb944;
 }
