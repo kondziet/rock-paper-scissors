@@ -79,15 +79,37 @@ main {
     width: 50%;
     aspect-ratio: 1/1;
     margin: 20px auto;
+    position: relative;
 }
 
 .button {
-    padding: 3em;
     user-select: none;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    position: absolute;
 }
 
-.button:hover {
+.button {
+    width: 100px;
+    height: 100px;
     background-color: gray;
+    position: absolute;
+}
+
+.button-rock {
+    top: 0;
+    left: 0;
+}
+
+.button-paper {
+    top: 0;
+    right: 0;
+}
+
+.button-scissors {
+    bottom: 0;
+    left: 50%;
 }
 
 /* FOOTER */
