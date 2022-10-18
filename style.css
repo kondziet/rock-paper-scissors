@@ -41,6 +41,22 @@ header {
     display: block;
 }
 
+.game-status-container {
+    border: 2px solid #edf6fc;
+    border-radius: 5px;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    padding: 2em;
+    align-items: center;
+
+}
+
+#game-status{
+    font-size: 25px;
+    font-weight: 600;
+}
+
 .scores-container {
     border: 2px solid #edf6fc;
     border-radius: 5px;
