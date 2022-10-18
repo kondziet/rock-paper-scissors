@@ -74,7 +74,7 @@ main {
 
 .buttons-container {
     border: 1px solid black;
-    width: 50%;
+    width: 60%;
     max-width: 450px;
     aspect-ratio: 1/1;
     margin: 20px auto;
@@ -82,26 +82,35 @@ main {
 }
 
 .button {
+    width: 40%;
+    aspect-ratio: 1/1;
     user-select: none;
-    width: 100px;
-    height: 100px;
-    background-color: gray;
     position: absolute;
+    background-color: transparent;
+    border: none;
+}
+
+.button img {
+    width: 100%;
+    aspect-ratio: 1/1;
 }
 
 .button-rock {
     top: 0;
     left: 0;
+    transform: translate(10%, 10%);
 }
 
 .button-paper {
     top: 0;
     right: 0;
+    transform: translate(-10%, 10%);
 }
 
 .button-scissors {
     bottom: 0;
     left: 50%;
+    transform: translate(-50%, -10%);
 }
 
 /* FOOTER */
