@@ -18,7 +18,7 @@ whatBeatsWhat.set("scissors", "paper")
 
 function playRound(e) {
     
-    let playerChoice = e.target.getAttribute("data-key")
+    let playerChoice = e.target.parentElement.getAttribute("data-key")
     let score = getScore(playerChoice, getComputerChoice())
 
     if (score == "user") {
