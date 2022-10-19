@@ -3,6 +3,10 @@ const computerScoreDisplay = document.querySelector("#computer-score")
 const buttonsContainer = document.querySelector(".buttons-container")
 const buttons = document.querySelectorAll(".button")
 const gameStatus = document.querySelector("#game-status")
+const main = document.querySelector("main")
+
+const newGameButton = document.querySelector(".new-game")
+newGameButton.addEventListener("click", newGame)
 
 let userScore = 0
 let computerScore = 0
@@ -50,6 +54,24 @@ function gameOver() {
     })
 
     buttonsContainer.classList.add("disabled")
+
+    newGameButton.style.display = "block"
+}
+
+function newGame() {
+    newGameButton.style.display = "none"
+    buttonsContainer.classList.remove("disabled")
+    buttons.forEach(button => {
+        button.disabled = false
+        button.classList.add("hover")
+    })
+
+    userScore = 0
+    computerScore = 0
+
+    userScoreDisplay.textContent = 0
+    computerScoreDisplay.textContent = 0
+    gameStatus.textContent = ""
 }
 
 function getComputerChoice() {
