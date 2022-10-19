@@ -1,6 +1,7 @@
 const userScoreDisplay = document.querySelector("#player-score")
 const computerScoreDisplay = document.querySelector("#computer-score")
 const buttons = document.querySelectorAll(".button")
+const gameStatus = document.querySelector("#game-status")
 
 let userScore = 0
 let computerScore = 0
@@ -23,13 +24,19 @@ function playRound(e) {
 
     if (score == "user") {
         userScoreDisplay.textContent = `${++userScore}`
+        gameStatus.textContent = "User win!"
     } else if (score == "computer") {
         computerScoreDisplay.textContent = `${++computerScore}`
+        gameStatus.textContent = "Computer win!"
+    } else {
+        gameStatus.textContent = "Draw!"
     }
 
-    if (userScore == 3) {
+    if (userScore == 5) {
+        gameStatus.textContent = "User won!"
         buttons.disabled = true
-    }else if (computerScore == 3) {
+    }else if (computerScore == 5) {
+        gameStatus.textContent = "Computer won!"
         buttons.disabled = true
     }
 
