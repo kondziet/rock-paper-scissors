@@ -49,7 +49,6 @@ header {
     display: flex;
     padding: 2em;
     align-items: center;
-
 }
 
 #game-status{
@@ -95,6 +94,11 @@ main {
     aspect-ratio: 1/1;
     margin: 20px auto;
     position: relative;
+    border-radius: 10%;
+}
+
+.buttons-container.disabled {
+    filter: blur(2px);
 }
 
 .button {
@@ -121,7 +125,7 @@ main {
     transform: translate(10%, 10%);
 }
 
-.button-rock:hover {
+.button-rock.hover:hover {
     transform: translate(10%, 10%) scale(1.1);
 }
 
@@ -131,7 +135,7 @@ main {
     transform: translate(-10%, 10%);
 }
 
-.button-paper:hover {
+.button-paper.hover:hover {
     transform: translate(-10%, 10%) scale(1.1);
 }
 
@@ -141,7 +145,7 @@ main {
     transform: translate(-50%, -10%);
 }
 
-.button-scissors:hover {
+.button-scissors.hover:hover {
     transform: translate(-50%, -10%) scale(1.1);
 }
 

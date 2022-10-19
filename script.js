@@ -1,5 +1,6 @@
 const userScoreDisplay = document.querySelector("#player-score")
 const computerScoreDisplay = document.querySelector("#computer-score")
+const buttonsContainer = document.querySelector(".buttons-container")
 const buttons = document.querySelectorAll(".button")
 const gameStatus = document.querySelector("#game-status")
 
@@ -34,12 +35,21 @@ function playRound(e) {
 
     if (userScore == 5) {
         gameStatus.textContent = "User won!"
-        buttons.disabled = true
+        gameOver();
     }else if (computerScore == 5) {
         gameStatus.textContent = "Computer won!"
-        buttons.disabled = true
+        gameOver();
     }
 
+}
+
+function gameOver() {
+    buttons.forEach(button => {
+        button.disabled = true
+        button.classList.remove("hover")
+    })
+
+    buttonsContainer.classList.add("disabled")
 }
 
 function getComputerChoice() {
